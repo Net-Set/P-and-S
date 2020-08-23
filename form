@@ -1,0 +1,107 @@
+<html>
+<head>
+<title>login-form</title>
+<style>
+body {
+  background-image: linear-gradient(to left, #0ff, #00f);
+}
+.form{
+  width: 20%;
+  height: 10px;
+  position: absolute;
+  top: -20px;
+  left: 40%;
+  background-image: none;
+  font-size: 20px;
+  font-family: cursive;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 0px 0px 15px #0ff;
+}
+input {
+  margin: 10px 40px;
+  padding: 5px;
+  width: 80%;
+  font-size: 20px;
+  font-family: cursive;
+}
+input:first-child {
+  margin-top: 50px;
+}
+p {
+  margin: 10px 40px;
+  padding: 10px;
+  width: 80%;
+}
+button {
+  width: 50%;
+  margin-left: 25%;
+  height: 40px;
+  background-image: linear-gradient(to left, #0ff, #00f);
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  font-size: 20px;
+  font-family: cursive;
+}
+button:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to right, #0ff, #00f);
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  animation: neon 2s infinite linear;
+}
+
+@keyframes neon {
+  0%,
+  100% {
+    text-shadow: none;
+  }
+  50% {
+    text-shadow: 2px 2px 10px #000, -2px -2px 10px #000;
+  }
+}
+
+</style>
+
+</head>
+<body>
+<div class="form">
+<input type="text" name="username" id="" placeholder="UserName" />
+<input type="password" name="pass" id="" placeholder="Password" />
+<button>Login</button>
+  <p>Forget password ? <a href="#">Click here</a></p>
+</div>
+
+<script>
+
+var txt = $("input");
+$(document).ready(function () {
+  $(".form").animate(
+    {
+      top: "20%",
+    },
+    2000
+  );
+  $(".form").animate(
+    {
+      width: "+=20%",
+      left: "-=10%",
+    },
+    1500
+  );
+  $(".form").animate(
+    {
+      height: "+=290px",
+    },
+    1500
+  );
+});
+
+</script>
+</body>
+</html>
